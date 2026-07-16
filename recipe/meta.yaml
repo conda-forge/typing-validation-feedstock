@@ -31,6 +31,7 @@ test:
   imports:
     - typing_validation
   commands:
+    - pip install optmanage
     - pip check
   requires:
     - python {{ python_min }}
