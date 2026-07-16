@@ -1,5 +1,6 @@
 {% set name = "typing-validation" %}
-{% set version = "1.2.12" %}
+{% set version = "2.0.0" %}
+{% set python_min = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/typing_validation-{{ version }}.tar.gz
-  sha256: 7ea9463a18bd04922e799cac1954f687e68e9564773f81db491536852ffe1d54
+  sha256: 8bc39726da4b7f15ee156cda5378081d44ebccf1dc05f08be952715b37806b51
 
 build:
   noarch: python
@@ -21,6 +22,7 @@ requirements:
     - wheel
     - setuptools-scm >=6.2
     - pip
+    - hatchling
   run:
     - python >={{ python_min }}
     - typing_extensions >=4.6.0
@@ -29,8 +31,10 @@ test:
   imports:
     - typing_validation
   commands:
+    - pip install optmanage
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
