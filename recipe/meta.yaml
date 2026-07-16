@@ -21,6 +21,7 @@ requirements:
     - wheel
     - setuptools-scm >=6.2
     - pip
+    - hatchling
   run:
     - python >={{ python_min }}
     - typing_extensions >=4.6.0
