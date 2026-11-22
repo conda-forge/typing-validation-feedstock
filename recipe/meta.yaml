@@ -1,13 +1,13 @@
 {% set name = "typing-validation" %}
-{% set version = "1.2.12" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/typing_validation-{{ version }}.tar.gz
-  sha256: 7ea9463a18bd04922e799cac1954f687e68e9564773f81db491536852ffe1d54
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/typing_validation-{{ version }}.tar.gz
+  sha256: cc39a4756b2198902c4a9f2257dab49603e56095db7dba6304d477377ea88543
 
 build:
   noarch: python
